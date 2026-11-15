@@ -1,0 +1,316 @@
+\documentclass[11pt,letterpaper]{article}
+
+% ============ PAQUETES ============
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{margin=2.2cm}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{comment}
+% ============ COLORES (paleta IEEE) ============
+\definecolor{ieeeblue}{HTML}{00629B}
+\definecolor{ieeedark}{HTML}{003B5C}
+\definecolor{ieeegold}{HTML}{F2A900}
+\definecolor{lightblue}{HTML}{EAF4FB}
+\definecolor{lightgold}{HTML}{FFF6E0}
+\definecolor{greenok}{HTML}{2E7D32}
+\definecolor{lightgreen}{HTML}{E8F5E9}
+\definecolor{grayline}{HTML}{666666}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=ieeeblue,
+    urlcolor=ieeeblue,
+    citecolor=ieeeblue,
+    pdftitle={Convocatoria Oficial - Feria de Inventos IEEE UAA 2026},
+    pdfauthor={Rama Estudiantil IEEE - UAA}
+}
+
+% ============ TÍTULOS ============
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{ieeedark}}
+  {\thesection}{0.6em}{}[{\color{ieeegold}\titlerule[1.2pt]}]
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{ieeeblue}}
+  {\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\color{ieeedark}}
+  {\thesubsubsection}{0.5em}{}
+
+% ============ ENCABEZADO / PIE ============
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{ieeegold}\leaders\hrule height \headrulewidth\hfill}}
+\fancyhead[L]{\small\color{grayline} Feria de Inventos IEEE UAA 2026}
+\fancyhead[R]{\small\color{grayline} Convocatoria}
+\fancyfoot[C]{\small\color{grayline}\thepage}
+
+% ============ CAJAS PERSONALIZADAS ============
+\newtcolorbox{infobox}[1][]{
+  colback=lightblue, colframe=ieeeblue, boxrule=0.8pt, arc=3pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt, breakable, #1
+}
+\newtcolorbox{tipbox}[1][]{
+  colback=lightgold, colframe=ieeegold, boxrule=0.8pt, arc=3pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt, breakable, #1
+}
+\newtcolorbox{okbox}[1][]{
+  colback=lightgreen, colframe=greenok, boxrule=0.8pt, arc=3pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt, breakable, #1
+}
+
+\newcommand{\infotitle}[1]{\textbf{\color{ieeeblue}#1}\\[3pt]}
+\newcommand{\tiptitle}[1]{\textbf{\color{ieeegold!70!black}#1}\\[3pt]}
+\newcommand{\oktitle}[1]{\textbf{\color{greenok}#1}\\[3pt]}
+
+\setlist[itemize]{leftmargin=1.4em}
+\setlist[enumerate]{leftmargin=1.6em}
+
+% ============ CHECKLIST ============
+\newlist{checklist}{itemize}{1}
+\setlist[checklist]{label=$\square$, leftmargin=1.6em}
+
+\title{}
+\date{}
+
+\begin{document}
+
+% ============ PORTADA ============
+\begin{titlepage}
+\centering
+\vspace*{1.2cm}
+
+{\Huge\bfseries\color{ieeedark} Convocatoria Oficial 
+\\[20pt]
+Feria de Inventos y Proyectos Tecnológicos}\\[10pt]
+{\Large\color{ieeeblue} Engineering Showcase - IEEE UAA 2026}\\[25pt]
+
+\rule{0.7\textwidth}{1.2pt}\\[10pt]
+{\large Organiza: Rama Estudiantil IEEE -- Universidad Autónoma de Aguascalientes}\\[30pt]
+
+\begin{tcolorbox}[colback=lightblue, colframe=ieeeblue, width=0.85\textwidth, arc=4pt]
+\centering
+\textbf{Contenido de este documento:}\\[4pt]
+Alcance y ejes operativos $\cdot$ Comité organizador $\cdot$ Cronograma a 6 meses $\cdot$
+Bases, evaluación y voto del público $\cdot$ Jueces $\cdot$ Sedes (institucional / socio-cultural / externa) $\cdot$
+Agenda minuto a minuto $\cdot$ Presupuesto $\cdot$ Patrocinios $\cdot$ Esquema de incentivos $\cdot$ Anexos y plantillas
+\end{tcolorbox}
+
+\vfill
+
+{\large Aguascalientes, México}\\
+{\large 29 de julio de 2026}\\[10pt]
+
+
+\tableofcontents
+
+
+\begin{center}
+\begin{tabularx}{0.85\textwidth}{@{}r X@{}}
+\textbf{Fecha de Publicación:} & 15 de agosto de 2026 \\
+\textbf{Sede del Evento:} & Campus Central TENTATIVO \\
+\textbf{Registro y Recepción:} & [Enlace de registro con tu correo institucional] \\
+\end{tabularx}
+\end{center}
+
+\vspace*{1cm}
+{\large\bfseries Aguascalientes, Ags., México $\cdot$ Ciclo Académico 2026}
+\end{titlepage}
+
+
+\newpage
+
+\tableofcontents
+
+
+% ======================================================================
+\section{Presentación y Objetivos}
+% ======================================================================
+
+La **Universidad Autónoma de Aguascalientes (UAA)**, a través del Comité Organizador en conjunto con la **Rama Estudiantil IEEE UAA** y el grupo de afinidad **IEEE Women in Engineering (WIE)**, convoca a la comunidad estudiantil de licenciatura y posgrado a participar en el **Hackathon \& Tech Challenge UAA 2026**.
+
+Este certamen constituye un espacio académico y tecnológico de alta intensidad diseñado para fomentar el desarrollo de soluciones técnicas viables, la programación de prototipos funcionales y el trabajo multidisciplinario.
+
+\begin{stembox}
+\stemtitle{Propósito Especial de la Convocatoria: Impulso Femenino en STEM}
+Con la finalidad de visibilizar, fortalecer y acelerar la participación activa de las mujeres en las áreas de Ciencia, Tecnología, Ingeniería y Matemáticas (STEM), esta edición promueve de manera prioritaria el liderazgo de mujeres en la conformación de los equipos, el desarrollo de código y la defensa técnica de los proyectos.
+\end{stembox}
+
+\subsection{Objetivos Principales}
+\begin{itemize}
+    \item \textbf{Desarrollo Tecnológico Aplicado:} Incentive a las y los estudiantes a transformar conceptos teóricos en prototipos de software, hardware o análisis de datos aplicados a problemas reales.
+    \item \textbf{Inclusión y Equidad en Áreas STEM:} Incrementar la representatividad de estudiantes mujeres en roles de arquitectura de software, liderazgo técnico y defensa de proyectos ante jurados de la industria.
+    \item \textbf{Vinculación Universidad-Industria-Gobierno:} Conectar el talento joven de la UAA con empresas tractoras del sector tecnológico, centros de investigación y organismos de innovación del estado de Aguascalientes.
+    \item \textbf{Fomento al Emprendimiento Científico-Tecnológico:} Promover el escalamiento de los prototipos desarrollados hacia proyectos de titulación, propiedad intelectual o emprendimientos de base tecnológica.
+\end{itemize}
+
+% ======================================================================
+\section{Bases y Requisitos de Participación}
+% ======================================================================
+
+\subsection{Elegibilidad}
+Podrán participar todas y todos los alumnos inscritos regularmente en los programas de licenciatura, ingeniería o posgrado de la Universidad Autónoma de Aguascalientes en el ciclo escolar vigente. Se permite la colaboración interdepartamental entre distintas carreras (p. ej., Ingeniería de Software, Electrónica, Diseño Industrial, Administración, Biotecnología, etc.).
+
+\subsection{Formato de Equipos y Criterio de Equidad STEM}
+\begin{checklist}
+    \item Los equipos estarán integrados por un mínimo de **3** y un máximo de **5 integrantes**.
+    \item **Requisito de Representación Femenina:** Con el objetivo de visibilizar el talento de las mujeres en la tecnología, **cada equipo deberá contar con al menos un 50\% de integrantes mujeres** o bien contar con una **Líder Técnica de Proyecto (Captain/Lead)** en el equipo.
+    \item Cada equipo deberá designar a una representante o líder de equipo para efectos de comunicación oficial con el Comité Organizador.
+    \item Los equipos podrán contar con el acompañamiento de un docente o investigador asesor de la UAA (opcional pero altamente recomendado).
+\end{checklist}
+
+\subsection{Proceso de Inscripción}
+\begin{enumerate}
+    \item **Registro en Línea:** La líder o representante del equipo deberá llenar el formulario oficial disponible en \url{[ENLACE DE REGISTRO]} antes de la fecha límite establecida.
+    \item **Documentación Requerida:** Anexar comprobante de inscripción vigente (kardex o credencial UAA) de cada integrante en formato PDF.
+    \item **Confirmación:** Una vez validada la elegibilidad de las y los integrantes, el equipo recibirá una clave única de registro (**ID de Equipo**) con la que participará durante las fases del evento.
+\end{enumerate}
+
+% ======================================================================
+\section{Categorías y Ejes Temáticos}
+% ======================================================================
+
+Los proyectos inscritos deberán enmarcarse en una de las siguientes categorías de desarrollo e innovación tecnológica:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{4.2cm} X@{}}
+\toprule
+\textbf{Categoría / Eje} & \textbf{Alcance y Enfoque del Reto} \\
+\midrule
+\textbf{1. Inteligencia Artificial y Ciencia de Datos} & Modelos de Machine Learning, visión por computadora, procesamiento de lenguaje natural o analítica avanzada aplicados a la toma de decisiones, optimización urbana o salud pública. \\
+\midrule
+\textbf{2. IoT y Desarrollo de Hardware} & Sistemas embebidos, mecatrónica, sensores inteligentes, monitoreo ambiental, automatización industrial o soluciones de eficiencia energética. \\
+\midrule
+\textbf{3. Software e Innovación Social} & Plataformas web/móviles orientadas a resolver problemáticas de equidad de género, inclusión social, educación accesible o apoyo a comunidades vulnerables. \\
+\midrule
+\textbf{4. Tecnologías Emergentes y Sostenibilidad} & Aplicaciones de ciberseguridad, blockchain, optimización de recursos hídricos, economía circular o energías limpias para Aguascalientes. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+% ======================================================================
+\section{Cronograma de Actividades}
+% ======================================================================
+
+El evento se desarrollará de acuerdo con las siguientes fechas críticas:
+
+\begin{center}
+\begin{longtable}{@{}p{4.0cm} p{7.5cm} p{3.5cm}@{}}
+\toprule
+\textbf{Fase / Hito} & \textbf{Descripción de Actividades} & \textbf{Fecha o Plazo} \\
+\midrule
+\endhead
+Apertura de la Convocatoria & Lanzamiento oficial y apertura de la plataforma de registros en línea. & [FECHA INICIO, Ej. 1 de sep] \\
+Sesión Informativa y Mentores & Webinar explicativo, resolución de dudas y presentación de mentores académicos/industriales. & [FECHA SESIÓN] \\
+Cierre de Registros & Límite definitivo para completar la inscripción de equipos y documentación. & [FECHA CIERRE REGISTRO] \\
+Publicación de Aceptados & Emisión de la lista oficial de equipos habilitados con su ID de participación. & [FECHA PUBLICACIÓN] \\
+\midrule
+\textbf{Jornada Hackathon (Día 1)} & Recepción, ceremonia de inauguración, desarrollo intensivo de prototipos y mentorías. & [FECHA DÍA 1, 08:00 h] \\
+\textbf{Jornada Hackathon (Día 2)} & Cierre de desarrollo de código, entrega de repositorio, evaluación por jurado y Pitch Final. & [FECHA DÍA 2, 09:00 - 17:00 h] \\
+\textbf{Ceremonia de Premiación} & Anuncio de ganadores, entrega de estímulos económicos, diplomas y clausura. & [FECHA DÍA 2, 17:30 h] \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+% ======================================================================
+\section{Criterios de Evaluación y Jurado Calificador}
+% ======================================================================
+
+\subsection{Proceso de Evaluación}
+La evaluación se dividirá en dos etapas: una **revisión técnica de código/prototipo** en el área de exhibición y una **presentación oral ejecutiva (Pitch)** de 3 minutos frente al Jurado Calificador plenaria.
+
+\subsection{Rúbrica de Puntuación}
+El Jurado Calificador, integrado por profesionales de la industria tecnológica, investigadoras de reconocido prestigio y representantes académicos, evaluará conforme a la siguiente escala:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{4.5cm} X c@{}}
+\toprule
+\textbf{Criterio} & \textbf{Descripción de Evaluación} & \textbf{Ponderación} \\
+\midrule
+\textbf{Innovación y Creatividad} & Originalidad de la solución propuesta frente al problema seleccionado y novedad del enfoque. & 25\% \\
+\midrule
+\textbf{Viabilidad y Solidez Técnica} & Calidad de la arquitectura de software/hardware, funcionamiento real del prototipo o MVP (Mínimo Producto Viable). & 30\% \\
+\midrule
+\textbf{Impacto Social y Equidad STEM} & Grado de impacto en la comunidad, enfoque de inclusión, sostenibilidad y alineación con los ODS. & 20\% \\
+\midrule
+\textbf{Pitch y Comunicación} & Claridad, dominio técnico, estructura de la presentación oral y respuesta a preguntas del jurado (destacando el liderazgo en la exposición). & 15\% \\
+\midrule
+\textbf{Factibilidad de Escalamiento} & Potencial del proyecto para transformarse en una startup, proyecto de titulación o registro de patente. & 10\% \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{infobox}
+\infotitle{Garantía de Imparcialidad y Blindaje del Proceso}
+Los criterios de puntuación se aplicarán mediante una rúbrica estandarizada digital. El fallo del Jurado Calificador será inapelable.
+\end{infobox}
+
+% ======================================================================
+\section{Premios, Reconocimientos e Incentivos}
+% ======================================================================
+
+Para reconocer el esfuerzo y la excelencia técnica de los proyectos participantes, se otorgan los siguientes estímulos:
+
+\subsection{Premios Principales por Categoría}
+\begin{itemize}
+    \item \textbf{1er Lugar General:} $[$Monto en efectivo / Fondos de aceleración, ej. \$15,000 MXN$]$, trofeo oficial, beca completa para programas de certificación técnica y vinculación directa con bolsas de trabajo preferentes de la industria local.
+    \item \textbf{2do Lugar General:} $[$Monto en efectivo, ej. \$9,000 MXN$]$, medallas de reconocimiento y kits tecnológicos patrocinados.
+    \item \textbf{3er Lugar General:} $[$Monto en efectivo, ej. \$5,000 MXN$]$, diplomas de distinción y dispositivos de desarrollo/hardware.
+\end{itemize}
+
+\subsection{Premio Especial: Reconocimiento "Liderazgo y Excelencia STEM Femenina"}
+\begin{stembox}
+\stemtitle{Premio Especial IEEE WIE a la Innovación Femenina}
+Se otorgará una distinción especial al equipo con el mejor proyecto técnico diseñado, liderado y presentado por estudiantes mujeres. Este galardón incluye un fondo especial de incubación $[$Monto / Beca, ej. \$5,000 MXN$]$ otorgado por el capítulo de afinidad IEEE Women in Engineering y patrocinios industriales.
+\end{stembox}
+
+\subsection{Beneficios Académicos y Constancias}
+\begin{okbox}
+\oktitle{Validez Institucional para las y los Participantes}
+\begin{itemize}
+    \item **Constancia Oficial con Validez Curriculum:** Expedida por la UAA y la Rama IEEE a todas las personas inscritas que concluyan la jornada de desarrollo y presenten su prototipo.
+    \item **Liberación de Horas Académicas / Prácticas:** Se gestionará ante la Decanatura correspondiente la convalidación de horas de Formación Humanística, Servicio Social o Prácticas Profesionales según la normativa interna de cada carrera.
+\end{itemize}
+\end{okbox}
+
+% ======================================================================
+\section{Contacto, Informes y Canales Oficiales}
+% ======================================================================
+
+Para mayor información, dudas sobre las bases o aclaraciones del proceso de registro, favor de dirigir sus solicitudes a través de los canales oficiales habilitados:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+\textbf{Oficina de Atención:} & Rama Estudiantil IEEE UAA / Centro de Ciencias Básicas \\
+\textbf{Correo Electrónico:} & \href{mailto:convocatoria.hackathon@uaa.mx}{convocatoria.hackathon@uaa.mx} / \href{mailto:ieee@edu.uaa.mx}{ieee@edu.uaa.mx} \\
+\textbf{Sitio Web Oficial:} & \url{https://www.uaa.mx/[ENLACE_EVENTO]} \\
+\textbf{Redes Sociales:} & Instagram/Facebook: \textbf{@IEEE\_UAA} | \textbf{@WIE\_IEEE\_UAA} \\
+\textbf{Horario de Atención:} & Lunes a Viernes de 09:00 a 17:00 horas (Hora del Centro de México) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\vspace*{1cm}
+\begin{center}
+\textit{“Seamos el motor que transforme la tecnología en igualdad, conocimiento y bienestar para nuestra sociedad.”} \\[10pt]
+\textbf{Atentamente,} \\[5pt]
+\textbf{Comité Organizador del Hackathon \& Tech Challenge UAA 2026} \\
+Universidad Autónoma de Aguascalientes $\cdot$ Rama Estudiantil IEEE \& WIE UAA
+\end{center}
+
+\end{document}

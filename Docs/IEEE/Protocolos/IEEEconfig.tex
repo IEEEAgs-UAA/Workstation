@@ -1,0 +1,112 @@
+% =========================
+% PAQUETES
+% =========================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{ragged2e}
+\usepackage{helvet}
+\usepackage{titlesec}  % <-- Agregar este paquete
+\renewcommand{\familydefault}{\sfdefault}
+
+% Justificacion uniforme y mejor ajuste de lineas para evitar desbordes.
+\AtBeginDocument{\justifying}
+\setlength{\emergencystretch}{1.5em}
+
+% =========================
+% GEOMETRÍA
+% =========================
+\geometry{
+    top=2cm,
+    bottom=2.5cm,
+    left=2.5cm,
+    right=2.5cm
+}
+
+% =========================
+% COLORES PERSONALIZADOS
+% =========================
+\definecolor{ieeeOrange}{HTML}{E07830}
+\definecolor{ieeeGreen}{HTML}{8FBC8F}
+\definecolor{ieeeLightBlue}{HTML}{87CEEB}
+\definecolor{ieeeGray}{HTML}{C0C0C0}
+\definecolor{titleBrown}{HTML}{5D4E37}
+\definecolor{sectionTeal}{HTML}{008080}
+\definecolor{linkTeal}{HTML}{007070}
+\definecolor{textBrown}{HTML}{716650}
+
+% =========================
+% FORMATEO DE SECCIONES
+% =========================
+\titleformat{\section}
+    {\titlerule
+    \Large\bfseries\color{ieeeOrange}}  % Formato: grande, negrita, naranja
+    {}                                    % Sin número
+    {0pt}                                 % Sin espacio entre número y título
+    {}                                    % Sin prefijo
+\titlespacing*{\section}{0pt}{0.8cm}{0.4cm}  % Espaciado: izq, antes, después
+
+\titleformat{\subsection}
+    {\large\bfseries\color{ieeeOrange}}
+    {}
+    {0pt}
+    {}
+\titlespacing*{\subsection}{0pt}{0.6cm}{0.3cm}
+
+% =========================
+% COMANDOS PERSONALIZADOS
+% =========================
+
+% Barra de colores superior
+\newcommand{\colorbar}{%
+    \noindent
+    \begin{tikzpicture}[remember picture, overlay]
+        \fill[ieeeOrange] (current page.north west) rectangle ++(5.25cm,-0.4cm);
+        \fill[ieeeGreen] ([xshift=5.25cm]current page.north west) rectangle ++(5.25cm,-0.4cm);
+        \fill[ieeeLightBlue] ([xshift=10.5cm]current page.north west) rectangle ++(5.25cm,-0.4cm);
+        \fill[ieeeGray] ([xshift=15.75cm]current page.north west) rectangle ++(5.25cm,-0.4cm);
+    \end{tikzpicture}
+}
+
+% Línea de acción (color naranja)
+\newcommand{\lineaAccion}[2]{%
+    \subsection*{Línea de Acción #1: #2}
+}
+
+% Fila de tabla descriptiva
+\newcommand{\filaDescriptiva}[2]{%
+    \textbf{#1} & #2 \\[0.4cm]
+}
+
+\setlist[enumerate,1]{label=\Roman*., font=\bfseries, leftmargin=1.5cm}
+\setlist[enumerate,2]{label=\roman*., leftmargin=1cm}
+
+\newcommand{\logos}{
+% Logos (placeholder - reemplazar con logos reales)
+\noindent
+\begin{minipage}[c]{0.4\textwidth}
+    \centering
+    % Logo IEEE (diamante)
+    \includegraphics[width=0.9\linewidth]{src/IEEEBLK.png}
+\end{minipage}%
+\hfill
+\hfill
+\begin{minipage}[c]{0.3\textwidth}
+    \centering
+    % Logo Young Professionals
+    \includegraphics[width=1.2\linewidth]{src/UAA2.png}
+
+\end{minipage}
+
+
+
+}
